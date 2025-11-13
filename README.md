@@ -153,67 +153,67 @@ DELETE /relatos/:id
 
 # Testes via CURL
 ## Registrar usuário
-`curl -X POST http://localhost:3001/auth/registrar \
+curl -X POST http://localhost:3001/auth/registrar \
 
   -H "Content-Type: application/json" \
   
-  -d '{"nome":"User","email":"user@gmail.com","senha":"12345678"}'`
+  -d '{"nome":"User","email":"user@gmail.com","senha":"12345678"}'
   
 ## Login
-`curl -X POST http://localhost:3001/auth/login \
+curl -X POST http://localhost:3001/auth/login \
 
   -H "Content-Type: application/json" \
   
-  -d '{"email":"teste1@gmail.com","senha":"12345678"}'`
+  -d '{"email":"teste1@gmail.com","senha":"12345678"}'
 
 ## Refresh token
-`curl -X POST http://localhost:3001/auth/refresh \
+curl -X POST http://localhost:3001/auth/refresh \
 
   -H "Content-Type: application/json" \
   
-  -d '{"refreshToken":"SEU_REFRESH_TOKEN"}'`
+  -d '{"refreshToken":"SEU_REFRESH_TOKEN"}'
   
 ## Listar relatos
-`curl http://localhost:3001/relatos \
+curl http://localhost:3001/relatos \
 
-  -H "Authorization: Bearer SEU_ACCESS"`
+  -H "Authorization: Bearer SEU_ACCESS"
 
 ## Buscar relato por ID
-`curl http://localhost:3001/relatos/1 \
+curl http://localhost:3001/relatos/1 \
 
-  -H "Authorization: Bearer SEU_ACCESS"`
+  -H "Authorization: Bearer SEU_ACCESS"
 
 ## Criar relato
-`curl -X POST http://localhost:3001/relatos \
+curl -X POST http://localhost:3001/relatos \
 
   -H "Authorization: Bearer SEU_TOKEN" \
   
   -H "Content-Type: application/json" \
   
-  -d '{"dataHora":"2025-11-12 10:00:00","descricao":"Teste","latitude":1,"longitude":1,"origem":"app","tipo":"roubo","usuarioEmail":"teste@gmail.com"}'`
+  -d '{"dataHora":"2025-11-12 10:00:00","descricao":"Teste","latitude":1,"longitude":1,"origem":"app","tipo":"roubo","usuarioEmail":"teste@gmail.com"}'
 
 ## Atualizar relato
-`curl -X PUT http://localhost:3001/relatos/ID_DO_RELATO \
+curl -X PUT http://localhost:3001/relatos/ID_DO_RELATO \
 
   -H "Authorization: Bearer SEU_ACCESS" \
   
   -H "Content-Type: application/json" \
   
-  -d '{"id": ID_DO_RELATO, "descricao":"Novo texto", "tipo":"furto"}'`
+  -d '{"id": ID_DO_RELATO, "descricao":"Novo texto", "tipo":"furto"}'
 
 ## Remover relato
-`curl -X DELETE http://localhost:3001/relatos/ID_DO_RELATO \
+curl -X DELETE http://localhost:3001/relatos/ID_DO_RELATO \
 
-  -H "Authorization: Bearer SEU_ACCESS"`
+  -H "Authorization: Bearer SEU_ACCESS"
 
 ## Logout
-`curl -X POST http://localhost:3001/auth/logout \
+curl -X POST http://localhost:3001/auth/logout \
 
   -H "Authorization: Bearer SEU_ACCESS" \
   
   -H "Content-Type: application/json" \
   
-  -d '{"accessToken":"SEU_ACCESS","refreshToken":"SEU_REFRESH"}'`
+  -d '{"accessToken":"SEU_ACCESS","refreshToken":"SEU_REFRESH"}'
 
 # Testes de Cache
 1 - Primeira requisição
