@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const { verificarBlacklistDB } = require('../usecases/AuthUseCases');
 
-const SECRET_ACCESS = process.env.JWT_SECRET_ACCESS || 'chaveacesso123';
+const SECRET_ACCESS = process.env.JWT_SECRET_ACCESS;
 
 const autenticar = async (req, res, next) => {
   const token = req.headers['authorization']?.split(' ')[1];
