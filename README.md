@@ -66,9 +66,9 @@ API_RELATOS_URL=http://localhost:3003
 # API Auth (.env)
 PORT=3002
 
-JWT_SECRET_ACCESS=chave_acesso_super_segura
+JWT_SECRET_ACCESS=chave_acesso
 
-JWT_SECRET_REFRESH=chave_refresh_super_segura
+JWT_SECRET_REFRESH=chave_refresh
 
 DB_USER=seu_user
 
@@ -83,7 +83,7 @@ DB_PORT=5432
 # API Relatos (.env)
 PORT=3003
 
-JWT_SECRET_ACCESS=chave_acesso_super_segura
+JWT_SECRET_ACCESS=chave_acesso
 
 DB_USER=seu_user
 
