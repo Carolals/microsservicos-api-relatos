@@ -1,8 +1,8 @@
 const { loginDB, registrarDB, logoutDB, verificarBlacklistDB } = require('../usecases/AuthUseCases');
 const jwt = require('jsonwebtoken');
 
-const SECRET_ACCESS = process.env.JWT_SECRET_ACCESS || 'chaveacesso123';
-const SECRET_REFRESH = process.env.JWT_SECRET_REFRESH || 'chaverefresh456';
+const SECRET_ACCESS = process.env.JWT_SECRET_ACCESS;
+const SECRET_REFRESH = process.env.JWT_SECRET_REFRESH;
 
 const registrar = async (req, res) => {
   try {
